@@ -1,8 +1,11 @@
-const app = Vue.createApp ({
+const app = Vue.createApp({
     data() {
         return {
-            product: 'Socks',
-            description: 'Mõnusad sokid'
+            product: 'Sokid',
+            image: './assets/images/socks_green.jpg',
+            // solution
+            url: 'https://github.com/hellerin/vue3_shopping'
+            // solution
         }
     }
 })
