@@ -35,7 +35,7 @@ app.component('product-display', {
         class="button"
         :class="{ disabledButton: !inStock }"
         :disabled="!inStock"
-        @click="addToCart">
+        v-on:click="addToCart">
           Add to Cart
       </button>
       </div>
@@ -56,7 +56,7 @@ data() {
 },
 methods: {
     addToCart() {
-        this.cart += 1
+        this.$emit('add-to-cart', this.variants[this.selectedVariant].id)
     },
     updateVariant(index) {
         this.selectedVariant = index
